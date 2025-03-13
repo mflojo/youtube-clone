@@ -42,6 +42,12 @@ export function TRPCProvider(
         httpBatchLink({
           transformer: superjson, 
           url: getUrl(),
+          //remove headers () if there are problems
+          async headers () {
+            const headers = new Headers();
+            headers.set("x-trpc-source", "nextjs-react");
+            return headers;
+          }
         }),
       ],
     }),
