@@ -23,7 +23,7 @@ export const StudioUploadModal = () => {
             <ResponsiveModal
                 title="Upload a video"
                 open={!!create.data}
-                onOpenChange={() => create.reset}
+                onOpenChange={() => create.reset()}
             >
                 <p>This will be an uploader</p>
             </ResponsiveModal>
